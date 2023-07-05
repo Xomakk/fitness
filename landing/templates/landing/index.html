@@ -1,0 +1,354 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block links %}
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+{% endblock %}
+
+{% block nav-links %}
+    <li class="nav-item">
+        <a class="nav-link" href="#about">Обо мне</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#programs">Программы</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#feedback">Отзывы</a>
+    </li>
+{% endblock %}
+
+{% block content %}
+    <div class="main-image">
+        <img src="{% static 'landing/images/main.png' %}" class="img" >
+    </div>
+    <div class="container">
+        <div class="title-box">
+            <h1 class="main-title">ФИЛОСОФИЯ ФИТНЕСА</h1>
+            <h2 class="main-subtitle">- Кирилл Воронкин -</h2>
+            <a href="#programs" class="btn btn-get-program">Подобрать программу тренеровок</a>
+        </div>
+    </div>
+    <div class="about scrolling-offset text-white mb-5" id="about">
+        <div class="container">
+            <div class="about__wrapper d-flex flex-column gap-5">
+                <div class="row gap-3">
+                    <div class="col-md-5">
+                        <img src="{% static 'landing/images/about/1.jpg' %}" width="100%" class="img">
+                    </div>
+                    <div class="col">
+                        <h3>Обо мне</h3>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem deleniti magnam eveniet saepe fugit dolor reiciendis vero, vel, ea a corporis. Obcaecati fuga, aliquam id voluptate suscipit placeat! Facere repellat dolores, possimus cumque beatae velit deleniti sequi odit totam doloremque, repellendus vero saepe voluptas, enim dolor dignissimos atque delectus neque.
+                        </p>
+                    </div>
+                </div>
+                <div class="row gap-3">
+                    <div class="col">
+                        <h3>Что-то еще</h3>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem deleniti magnam eveniet saepe fugit dolor reiciendis vero, vel, ea a corporis. Obcaecati fuga, aliquam id voluptate suscipit placeat! Facere repellat dolores, possimus cumque beatae velit deleniti sequi odit totam doloremque, repellendus vero saepe voluptas, enim dolor dignissimos atque delectus neque.
+                        </p>
+                    </div>
+                    <div class="col-md-5">
+                        <img src="{% static 'landing/images/about/2.jpg' %}" width="100%" class="img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scrolling-offset" id="programs"></div>
+    <div class="programs bg-white text-black pt-5 pb-5">
+        <div class="container">
+            <h2 class="text-bold pb-3">Программы тренировок</h2>
+            <!-- Slider main container -->
+            <div class="programs-slider swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="card text-black bg-white border-secondary">
+                            <!-- <img src="..." class="card-img-top" alt="..."> -->
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+                            <div class="card-body">
+                                <h3 class="card-title">Программа 1</h3>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                </ul>
+                                <div class="row pt-3">
+                                    <div class="col">
+                                        <a class="btn btn-warning w-100 mb-2"
+                                           data-bs-toggle="modal"
+                                           data-bs-target="#program_1"
+                                        >
+                                            Подробнее
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <div class="d-flex align-items-center btn price">
+                                            <p class="w-100 new-price text-black"
+                                               data-bs-toggle="modal"
+                                               data-bs-target="#program_1"
+                                            >
+                                                Стоимость: <b class="ps-1">1200 руб.</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card text-black bg-white border-secondary ">
+                            <!-- <img src="..." class="card-img-top" alt="..."> -->
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+                            <div class="card-body">
+                                <h3 class="card-title">Программа 2</h3>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                </ul>
+                                <div class="d-flex justify-content-center pt-3">
+                                    <a class="btn btn-warning px-5"
+                                       data-bs-toggle="modal"
+                                       data-bs-target="#program_2"
+                                    >
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card text-black bg-white border-secondary ">
+                            <!-- <img src="..." class="card-img-top" alt="..."> -->
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+                            <div class="card-body">
+                                <h3 class="card-title">Программа 3</h3>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                </ul>
+                                <div class="d-flex justify-content-center pt-3">
+                                    <a class="btn btn-warning px-5"
+                                       data-bs-toggle="modal"
+                                       data-bs-target="#program_3"
+                                    >
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card text-black bg-white border-secondary ">
+                            <!-- <img src="..." class="card-img-top" alt="..."> -->
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+                            <div class="card-body">
+                                <h3 class="card-title">Программа 4</h3>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                </ul>
+                                <div class="d-flex justify-content-center pt-3">
+                                    <a class="btn btn-warning px-5"
+                                       data-bs-toggle="modal"
+                                       data-bs-target="#program_4"
+                                    >
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card text-black bg-white border-secondary ">
+                            <!-- <img src="..." class="card-img-top" alt="..."> -->
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+                            <div class="card-body">
+                                <h3 class="card-title">Программа 5</h3>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                </ul>
+                                <div class="d-flex justify-content-center pt-3">
+                                    <a class="btn btn-warning px-5"
+                                       data-bs-toggle="modal"
+                                       data-bs-target="#program_5"
+                                    >
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="feedback text-white pt-5 pb-5" id="feedback">
+        <div class="container" style="overflow: hidden;">
+            <h2 class="text-bold mb-5">Отзывы </h2>
+            <div class="swiper feedback-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">Slide 1</div>
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+                  <div class="swiper-slide">Slide 4</div>
+                  <div class="swiper-slide">Slide 5</div>
+                  <div class="swiper-slide">Slide 6</div>
+                  <div class="swiper-slide">Slide 7</div>
+                  <div class="swiper-slide">Slide 8</div>
+                  <div class="swiper-slide">Slide 9</div>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="program_1" tabindex="-1" aria-labelledby="programLabel_1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="programLabel_1">Программа 1</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          </div>
+          <div class="modal-body">
+            <div class="text-white border-secondary">
+                <div class="mb-3">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+                </div>
+                <div>
+                    <h3>Программа 5</h3>
+                    <ul class="d-flex flex-column gap-2">
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+              <div class="d-flex align-items-center price gap-2 ps-3">
+                  <p class="old-price">1950</p>
+                  <p class="new-price text-white pe-2">1200 руб.</p>
+                  <a href="accounts/buy?program=123" type="button" class="btn btn-danger">купить</a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="program_2" tabindex="-1" aria-labelledby="programLabel_2" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="programLabel_2">Заголовок модального окна 2</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            <button type="button" class="btn btn-primary">Сохранить изменения</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="program_3" tabindex="-1" aria-labelledby="programLabel_3" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="programLabel_3">Заголовок модального окна 3</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            <button type="button" class="btn btn-primary">Сохранить изменения</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="program_4" tabindex="-1" aria-labelledby="programLabel_4" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="programLabel_4">Заголовок модального окна 4</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            <button type="button" class="btn btn-primary">Сохранить изменения</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="program_5" tabindex="-1" aria-labelledby="programLabel_5" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="programLabel_5">Заголовок модального окна 5</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            <button type="button" class="btn btn-primary">Сохранить изменения</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+{% endblock %}
+
+{% block scripts %}
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="{% static 'landing/js/programs-slider.js' %}"></script>
+{% endblock %}
