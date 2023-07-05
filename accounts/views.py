@@ -4,8 +4,8 @@ from django.views import View
 
 
 @login_required
-def buy(request, program):
-    print(program)
+def buy(request):
+    print(request.GET.get('program', None))
     return render(request, template_name="accounts/buy.html")
 
 
